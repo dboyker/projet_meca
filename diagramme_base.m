@@ -1,8 +1,6 @@
 function diagramme_base();
 
-global k k1 k2 m l l1 l2 A omega
-t=[0:0.2:100];
-x0=[1.1708;0];
+global k k1 k2 m l l1 l2 A omega t x0
 theta = lsode("pendulum_double_ressort",x0,t);
 figure('NumberTitle','off','Name','Le pendule à double ressort','Position',[35 35 600 600],'Color','w');
 
