@@ -1,6 +1,10 @@
 function diagramme_phase();
 
-global x0 t
+
+global k k1 k2 m l l1 l2 A omega
+m=5;k1=5;k2=10;l=10;k=0;A=500;omega=2;l1=l/2;l2=l/2;
+t=[0:0.2:100];
+x0=[1.1708;0];
 
 theta = lsode("pendulum_double_ressort",x0,t);
 figure('NumberTitle','off','Name','Le pendule à double ressort','Position',[35 35 600 600],'Color','w');

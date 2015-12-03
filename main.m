@@ -1,1 +1,1 @@
-echo offclear% ---------- parameters ----------global k k1 k2 m l l1 l2 A omega t x0m=5;k1=5;k2=10;l=10;k=0;omega=2;l1=l/2;l2=l/2;% ---------- conditions initiales & pas ----------t=[0:0.2:100];x0=[1.1708;0];% ---------- diagrammes ----------diagramme_base(); %theta vs t & dtheta/dt vs t & x vs t%diagramme_phase();
+echo offclear%diagramme_base();diagramme_phase()
