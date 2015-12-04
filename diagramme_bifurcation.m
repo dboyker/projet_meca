@@ -1,1 +1,0 @@
-%work in progress function diagramme_bifurcation()global k k1 k2 m l l1 l2 A omegam=5;k1=0;k2=0;l=10;k=0;A=100;l1=l/2;l2=l/2;x0=[0;0];figure(1);axis([-1 2 -10 10]);omegah = (2*pi/omega)t=[0:h:100];for omega=0:0.05:1  theta = lsode("pendulum_double_ressort",x0,t);  for i=1:size(theta)(1);    plot(omega,theta(i,2));    hold on;  endforendforendfunction
