@@ -9,7 +9,7 @@ options = odeset('RelTol',1e-6);
 
 for j=1:15
 
-  [t,y] = ode45('pendulum_double_ressort',time,[0 j/5],options);
+  [t,y] = ode45('pendulum_double_ressort',time,[0 j/5],options)
 
    for i=2:max(size(t))
  
