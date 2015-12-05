@@ -14,7 +14,6 @@ options = odeset('RelTol',1e-6);
   [t,y2] = ode45('pendulum_double_ressort',time,x1,options);
   %@% [t,y3] = ode45('pendulum_double_ressort',time,x2,options);
   
-      max(size(t))
    for i=2:max(size(t))
  
  
@@ -34,7 +33,7 @@ options = odeset('RelTol',1e-6);
    f = getframe(gcf);
    %if j == 15
    if i == max(size(t))
-   %imwrite(f.cdata,['diagramme_phase',num2str(i),'.png']);  %# Uncomment to Save the frame data
+   imwrite(f.cdata,['diagramme_phase',num2str(i),'.png']);  %# Uncomment to Save the frame data
    end
 
    drawnow;
