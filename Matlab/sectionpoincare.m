@@ -22,7 +22,7 @@ options = odeset('RelTol',1e-4);
 i = 1;
 tmax = t(max(size(t)));
 while i < tmax
-   
+   i % compteur à afficher ds la console
    %textbox(-2,2,['k=',k,'k1=',k1,'k2=',k2,'A=',A,'\omega =', omega]);
    
 
