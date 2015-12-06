@@ -33,9 +33,11 @@ time = [0:0.25:100];
 %%% SECTION POINCARE %%%
 %time = [0:2*pi/omega:10000]
 time = [0:20000];
-sectionpoincare(1*pi/omega)
+%sectionpoincare(1*pi/omega)
 
 
 
 %%% DIAGRAMME BIFURCATION %%%
-%diagramme_bifurcation()
+m=5;k1=3;k2=5;l=5;k=0;A=100;omega=2;l1=l/2;l2=l/2;
+time=[100:100:500];
+diagramme_bifurcation()
