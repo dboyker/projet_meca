@@ -63,9 +63,9 @@ for i=2:max(size(theta))
   subplot(3,1,2);
   box on;grid on;
 
-  line(t(i-1:i),theta(i-1:i,1),'Color','r','LineWidth',2);
-%   line(t(i-1:i),theta2(i-1:i,1),'Color','b','LineWidth',2);
-%   line(t(i-1:i),theta3(i-1:i,1),'Color','g','LineWidth',2);
+  line(t(i-1:i),theta(i-1:i,2),'Color','r','LineWidth',2);
+%   line(t(i-1:i),theta2(i-1:i,2),'Color','b','LineWidth',2);
+%   line(t(i-1:i),theta3(i-1:i,2),'Color','g','LineWidth',2);
   xlabel('t(s)');
   ylabel('d\theta/dt(1/s)'); % Pendule 1 rouge - Pendule 2 bleu
   drawnow;
@@ -80,9 +80,9 @@ for i=2:max(size(theta))
   subplot(3,1,3);
   box on;grid on;
   
-  line(t(i-1:i),theta(i-1:i,2),'Color','r','LineWidth',2);
-%   line(t(i-1:i),theta2(i-1:i,2),'Color','b','LineWidth',2);
-%   line(t(i-1:i),theta3(i-1:i,2),'Color','g','LineWidth',2);
+  line(t(i-1:i),theta(i-1:i,1),'Color','r','LineWidth',2);
+%   line(t(i-1:i),theta2(i-1:i,1),'Color','b','LineWidth',2);
+%   line(t(i-1:i),theta3(i-1:i,1),'Color','g','LineWidth',2);
   xlabel('t(s)');
   ylabel('\theta (radian)'); %% Pendule 1 rouge - Pendule 2 bleu
   drawnow;
