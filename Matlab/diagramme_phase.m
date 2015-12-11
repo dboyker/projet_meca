@@ -11,7 +11,7 @@ options = odeset('RelTol',1e-6);
   %[t,y] = ode45('pendulum_double_ressort',time,[0 j/5],options)
 
   [t,y] = ode45('pendulum_double_ressort',time,x0,options);
-  %[t,y2] = ode45('pendulum_double_ressort',time,x1,options);
+  [t,y2] = ode45('pendulum_double_ressort',time,x1,options);
   %@% [t,y3] = ode45('pendulum_double_ressort',time,x2,options);
   
    for i=2:max(size(t))
@@ -27,7 +27,7 @@ options = odeset('RelTol',1e-6);
    
    subplot(1,1,1);
    line([y(i-1,1) y(i,1)],[y(i-1,2) y(i,2)],'Color','r','LineWidth',1);
-  % line([y2(i-1,1) y2(i,1)],[y2(i-1,2) y2(i,2)],'Color','b','LineWidth',1);
+   line([y2(i-1,1) y2(i,1)],[y2(i-1,2) y2(i,2)],'Color','b','LineWidth',1);
    %@% line([y3(i-1,1) y3(i,1)],[y3(i-1,2) y3(i,2)],'Color','g','LineWidth',1);
 
    f = getframe(gcf);

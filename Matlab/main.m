@@ -5,11 +5,11 @@
 % VERT = PENDULE 3 idem pendule si besoin (bifurcation)
 
 global k k1 k2 m l l1 l2 Longueur l0 A omega x0 x1 x2 time
-m=5;k1=5;k2=10;l=10;k=0;A=500;omega=2;l1=l/2;l2=l/2;
+m=5;k1=5;k2=10;l=10;k=0;A=200;omega=2;l1=l/2;l2=l/2;
 %%% Conditions Initiales %%%
 % note: x = [theta, theta0.]
-x0 = [1.1708 0];
-x1 = [1.15 1.8];
+x0 = [1.7 0];
+x1 = [1.71 0];
 x2 = [1.1508 0];
 
 %x0 = [0 0];
@@ -23,7 +23,7 @@ time = [0:0.2:60];
 diagramme_base()
 
 %%% DIAGRAMME DE PHASE %%%
-time = [0:0.25:50];
+time = [0:0.25:100];
 %diagramme_phase()
 
 
