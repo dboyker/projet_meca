@@ -14,7 +14,7 @@ for A=0:5:500
    for i=0:2
 
    options = odeset('RelTol',1e-4);
-   [t,y] = ode45('pendulum_double_ressort',time,[1.699+i/1000 0],options);
+   [t,y] = ode45('pendulum_double_ressort',time,[1.7 i/1000],options);
 
 
       if i==0

@@ -23,11 +23,11 @@ for i=1:tmax
    title('Section de Poincare stroboscopique  - echantillonnage: 5');
    xlabel('\theta'); ylabel('d\theta/dt');
 
-   %plot(theta(i,1), theta(i,2),'.','Color','b','MarkerSize',5);
-   %plot(theta1(i,1),theta1(i,2),'.','Color','r','MarkerSize',5); 
+   plot(theta(i,1), theta(i,2),'.','Color','b','MarkerSize',5);
+   plot(theta1(i,1),theta1(i,2),'.','Color','r','MarkerSize',5); 
    
-   plot(mod(theta(i,1),2*pi), theta(i,2),'.','Color','b','MarkerSize',7);
-   plot(mod(theta1(i,1),2*pi),theta1(i,2),'.','Color','r','MarkerSize',7); 
+   %plot(mod(theta(i,1),2*pi), theta(i,2),'.','Color','b','MarkerSize',7);
+   %plot(mod(theta1(i,1),2*pi),theta1(i,2),'.','Color','r','MarkerSize',7); 
    drawnow;
 
 end
