@@ -1,6 +1,6 @@
 function sectionpoincare()
 
-global k k1 k2 m l l1 l2 Longueur l0 A omega x0 x1 x2 time
+global k k1 k2 m l l1 l2 A omega x0 x1 x2 time
 
 figure('NumberTitle','off','Name','SCI','Renderer','OpenGL','Color','w','Position',[100 100 600 600])
 
@@ -18,8 +18,6 @@ tmax = max(size(t));
 for i=1:tmax
    %i % compteur à afficher ds la console
    %textbox(-2,2,['k=',k,'k1=',k1,'k2=',k2,'A=',A,'\omega =', omega]);
-   
-
 
    box on;hold on;
    title('Section de Poincare stroboscopique  - echantillonnage: 5');
@@ -34,7 +32,5 @@ for i=1:tmax
 
 end
 
-
-
 f = getframe(gcf);
-imwrite(f.cdata,['SP_k=',num2str(k),num2str(k1),num2str(k2),num2str(A),num2str(omega),'.png']);
+imwrite(f.cdata,['SP_normal=',num2str(k),num2str(k1),num2str(k2),num2str(A),num2str(omega),'.png']);
