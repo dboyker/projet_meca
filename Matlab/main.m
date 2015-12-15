@@ -5,7 +5,7 @@
 % VERT = PENDULE 3 idem pendule si besoin (bifurcation)
 
 global k k1 k2 m l l1 l2 A omega x0 x1 x2 time
-m=5;k1=5;k2=10;l=10;k=0;A=500;omega=1;l1=l/2;l2=l/2;
+m=5;k1=5;k2=10;l=10;k=0;A=800;omega=1;l1=l/2;l2=l/2;
 
 %%% Conditions Initiales %%%
 % note: x = [theta, theta0.]
@@ -32,6 +32,6 @@ time = [0:1:5000];
 
 %%% DIAGRAMME BIFURCATION %%%
 time=[0:50:500];
-diagramme_bifurcation()
+%diagramme_bifurcation()
 %dia_bifurc_test_omega()
 %dia_bifurc_test_A()
