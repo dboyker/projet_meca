@@ -12,7 +12,7 @@ figure('NumberTitle','off','Name','Le pendule à double ressort','Position',[35 3
 
 [t,theta] = ode45(@pendulum_double_ressort,time,x0, options);
 [t2,theta2] = ode45(@pendulum_double_ressort,time,x1, options);
-%[t3,theta3] = ode45(@pendulum_double_ressort,time,x2, options);
+[t3,theta3] = ode45(@pendulum_double_ressort,time,x2, options);
 
 
 for i=2:max(size(theta))
@@ -32,17 +32,17 @@ for i=2:max(size(theta))
   line([ +l*sin(theta(i,1))],[ -l*cos(theta(i,1))],'Color','r','Marker','.','Markersize',30);
  
  
-% % Second pendulum
+% Second pendulum
   line([0 +l*sin(theta2(i,1))],[  0 -l*cos(theta2(i,1))],'Color','b','LineWidth',3);
    line([ +l*sin(theta2(i,1)) 0],[-l*cos(theta2(i,1)) -l*cos(theta2(i,1))],'Color','m','LineWidth',2);
    line([ +l*sin(theta2(i,1)) +l*sin(theta2(i,1))],[-l*cos(theta2(i,1)) 0],'Color','m','LineWidth',2);
    line([ +l*sin(theta2(i,1))],[ -l*cos(theta2(i,1))],'Color','b','Marker','.','Markersize',30);
-%   
-% % Third pendulum
-%   line([0 +l*sin(theta3(i,1))],[  0 -l*cos(theta3(i,1))],'Color','g','LineWidth',3);
-%   line([ +l*sin(theta3(i,1)) 0],[-l*cos(theta3(i,1)) -l*cos(theta3(i,1))],'Color','y','LineWidth',2);
-%   line([ +l*sin(theta3(i,1)) +l*sin(theta3(i,1))],[-l*cos(theta3(i,1)) 0],'Color','y','LineWidth',2);
-%   line([ +l*sin(theta3(i,1))],[ -l*cos(theta3(i,1))],'Color','g','Marker','.','Markersize',30);
+  
+% Third pendulum
+  line([0 +l*sin(theta3(i,1))],[  0 -l*cos(theta3(i,1))],'Color','g','LineWidth',3);
+  line([ +l*sin(theta3(i,1)) 0],[-l*cos(theta3(i,1)) -l*cos(theta3(i,1))],'Color','y','LineWidth',2);
+  line([ +l*sin(theta3(i,1)) +l*sin(theta3(i,1))],[-l*cos(theta3(i,1)) 0],'Color','y','LineWidth',2);
+  line([ +l*sin(theta3(i,1))],[ -l*cos(theta3(i,1))],'Color','g','Marker','.','Markersize',30);
   
   line([-30 30],[0 0],'Color','k','LineWidth',2);
   line([0 0],[-15 15],'Color','k','LineWidth',2);
@@ -62,7 +62,7 @@ for i=2:max(size(theta))
   line(t(i-1:i),theta(i-1:i,2),'Color','r','LineWidth',2);
   line(t(i-1:i),theta2(i-1:i,2),'Color','b','LineWidth',2);
    
-% line(t(i-1:i),theta3(i-1:i,2),'Color','g','LineWidth',2);
+  line(t(i-1:i),theta3(i-1:i,2),'Color','g','LineWidth',2);
   xlabel('t(s)');
   ylabel('d\theta/dt(1/s)'); % Pendule 1 rouge - Pendule 2 bleu
   drawnow;
@@ -78,9 +78,9 @@ for i=2:max(size(theta))
   box on;grid on;
   
   line(t(i-1:i),theta(i-1:i,1),'Color','r','LineWidth',2);
- line(t(i-1:i),theta2(i-1:i,1),'Color','b','LineWidth',2);
- line(t(i-1:i),[(1/(m*l*l))*A*cos(omega*t(i-1)) (1/(m*l*l))*A*cos(omega*t(i))],'Color','g','LineWidth',2); %mouvement du couple moteur
-%   line(t(i-1:i),theta3(i-1:i,1),'Color','g','LineWidth',2);
+  line(t(i-1:i),theta2(i-1:i,1),'Color','b','LineWidth',2);
+  line(t(i-1:i),[(1/(m*l*l))*A*cos(omega*t(i-1)) (1/(m*l*l))*A*cos(omega*t(i))],'Color','y','LineWidth',2); %mouvement du couple moteur
+  line(t(i-1:i),theta3(i-1:i,1),'Color','g','LineWidth',2);
   xlabel('t(s)');
   ylabel('\theta (radian)'); %% Pendule 1 rouge - Pendule 2 bleu
   drawnow;

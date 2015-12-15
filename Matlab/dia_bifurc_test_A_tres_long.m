@@ -1,4 +1,4 @@
-function dia_bifurc_test_A()
+function dia_bifurc_test_A_tres_long()
 figure('Name','Diagrammes de bifurcations - Pendule forcé avec 2 ressorts');
 
 axis([0.9 2 -1 3])
@@ -9,7 +9,7 @@ ylabel('d\theta/dt');
 global k k1 k2 m l l1 l2 A omega x0 x1 x2 time
 
 
-for A=0:5:500
+for A=0:5:1500
   
    for i=0:2
 
