@@ -5,10 +5,6 @@ clear
 % aviobj = avifile('projet009.avi','quality',100,'fps',50,'Compression','none')
 
 global k k1 k2 m l l1 l2 Longueur l0 A omega x0 x1 x2 time
-%m=5;k1=5;k2=10;l=10;k=0;A=500;omega=2;l1=l/2;l2=l/2;
-%x0 = [1.1708 0];
-%x1 = [1.1608 0];
-%time = [0:0.2:100];
 
 options = odeset('RelTol',1e-10);
 
