@@ -9,9 +9,9 @@ options = odeset('RelTol',1e-4);
 [t,theta] = ode45('pendulum_double_ressort',time,x0, options);
 [t1,theta1] = ode45('pendulum_double_ressort',time,x1, options);
 
-   dim = [.1 .4 .9 .6];
-   str = 'NAME (numbers) of the graphe = in order k, k1, k2, A, omega';
-   annotation('textbox',dim,'string',str, 'FitBoxToText', 'on');
+%    dim = [.1 .4 .9 .6];
+%    str = 'NAME (numbers) of the graphe = in order k, k1, k2, A, omega';
+%    annotation('textbox',dim,'string',str, 'FitBoxToText', 'on');
    
 tmax = max(size(t));
 
@@ -20,14 +20,14 @@ for i=1:tmax
    %textbox(-2,2,['k=',k,'k1=',k1,'k2=',k2,'A=',A,'\omega =', omega]);
 
    box on;hold on;
-   title('Section de Poincare stroboscopique  - echantillonnage: 5');
+   title('Section de Poincare stroboscopique  - echantillonnage: 2*pi/\omega');
    xlabel('\theta'); ylabel('d\theta/dt');
 
-   plot(theta(i,1), theta(i,2),'.','Color','b','MarkerSize',5);
-   plot(theta1(i,1),theta1(i,2),'.','Color','r','MarkerSize',5); 
+   %plot(theta(i,1), theta(i,2),'.','Color','b','MarkerSize',1);
+   %plot(theta1(i,1),theta1(i,2),'.','Color','r','MarkerSize',1); 
    
-   %plot(mod(theta(i,1),2*pi), theta(i,2),'.','Color','b','MarkerSize',7);
-   %plot(mod(theta1(i,1),2*pi),theta1(i,2),'.','Color','r','MarkerSize',7); 
+   plot(mod(theta(i,1),2*pi), theta(i,2),'.','Color','b','MarkerSize',1);
+   plot(mod(theta1(i,1),2*pi),theta1(i,2),'.','Color','r','MarkerSize',1); 
    drawnow;
 
 end

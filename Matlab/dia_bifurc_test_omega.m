@@ -9,7 +9,7 @@ ylabel('d\theta/dt');
 global k k1 k2 m l l1 l2 A omega x0 x1 x2 time
 
 
-for omega=0:0.1:15
+for omega=0:0.25:10
   
    for i=0:2
 
@@ -18,19 +18,19 @@ for omega=0:0.1:15
 
 
       if i==0
-         plot(omega,y(1:end,2),'.','Color','r','Markersize',1);
+         plot(omega,y(3:end,2),'.','Color','r','Markersize',1);
          drawnow;
          hold on
       end
 
       if i==1
-         plot(omega,y(1:end,2),'.','Color','b','Markersize',1);
+         plot(omega,y(3:end,2),'.','Color','b','Markersize',1);
          drawnow;
          hold on
       end
 
       if i==2
-         plot(omega,y(1:end,2),'.','Color','g','Markersize',1);
+         plot(omega,y(3:end,2),'.','Color','g','Markersize',1);
          drawnow;
          hold on
       end

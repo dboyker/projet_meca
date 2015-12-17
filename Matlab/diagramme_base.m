@@ -79,7 +79,7 @@ for i=2:max(size(theta))
   
   line(t(i-1:i),theta(i-1:i,1),'Color','r','LineWidth',2);
   line(t(i-1:i),theta2(i-1:i,1),'Color','b','LineWidth',2);
-  line(t(i-1:i),[(1/(m*l*l))*A*cos(omega*t(i-1)) (1/(m*l*l))*A*cos(omega*t(i))],'Color','y','LineWidth',2); %mouvement du couple moteur
+  line(t(i-1:i),[(1/(m*l*l))*A*cos(omega*t(i-1)) (1/(m*l*l))*A*cos(omega*t(i))],'Color','k','LineWidth',2); %mouvement du couple moteur
   line(t(i-1:i),theta3(i-1:i,1),'Color','g','LineWidth',2);
   xlabel('t(s)');
   ylabel('\theta (radian)'); %% Pendule 1 rouge - Pendule 2 bleu
