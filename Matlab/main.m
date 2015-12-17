@@ -6,7 +6,7 @@
 
 global k k1 k2 m l l1 l2 A omega x0 x1 x2 time
 
-m=5;k1=100000;k2=100000;l=10;k=0;A=300;omega=2;l1=l/2;l2=l/2;
+m=5;k1=5;k2=10;l=10;k=0;A=200;omega=1;l1=l/2;l2=l/2;
 
 %%% Conditions Initiales %%%
 % note: x = [theta, theta0.]
@@ -21,7 +21,7 @@ x2 = [1.7 0.002];
 
 %%% DIAGRAMME DE BASE %%%
 time = [100:0.2:130];
-diagramme_base()
+%diagramme_base()
 
 
 %%% DIAGRAMME DE PHASE %%%
@@ -31,8 +31,8 @@ time = [0:0.25:100];
 
 %%% SECTION POINCARE %%%
 %time = [0:10:3000];
-time = [0:2.3:700];
-%sectionpoincare()
+time = [0:10*pi:460*pi*10];
+sectionpoincare()
 
 
 %%% DIAGRAMME BIFURCATION %%%

@@ -26,8 +26,8 @@ for i=1:tmax
    %plot(theta(i,1), theta(i,2),'.','Color','b','MarkerSize',1);
    %plot(theta1(i,1),theta1(i,2),'.','Color','r','MarkerSize',1); 
    
-   plot(mod(theta(i,1),2*pi), theta(i,2),'.','Color','b','MarkerSize',1);
-   plot(mod(theta1(i,1),2*pi),theta1(i,2),'.','Color','r','MarkerSize',1); 
+   plot(mod(theta(i,1),2*pi), theta(i,2),'.','Color','b','MarkerSize',5);
+   plot(mod(theta1(i,1),2*pi),theta1(i,2),'.','Color','r','MarkerSize',5); 
    drawnow;
 
 end
