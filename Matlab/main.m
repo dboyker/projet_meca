@@ -6,7 +6,11 @@
 
 global k k1 k2 m l l1 l2 A omega x0 x1 x2 time
 
+<<<<<<< Updated upstream
 m=5;k1=0;k2=0;l=10;k=0;A=500;omega=2;l1=l/2;l2=l/2;
+=======
+m=5;k1=5;k2=10;l=10;k=0;A=200;omega=1;l1=l/2;l2=l/2;
+>>>>>>> Stashed changes
 
 %%% Conditions Initiales %%%
 % note: x = [theta, theta0.]
